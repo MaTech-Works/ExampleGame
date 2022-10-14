@@ -1,0 +1,4 @@
+[submodule "Assets/Framework"]
+	path = Assets/MaTech
+	url = git@github.com:MalodyTech/Framework.git
+	branch = master
