@@ -1,4 +1,4 @@
-﻿{
+{
     "files.exclude":
     {
         "**/.DS_Store":true,
@@ -10,7 +10,7 @@
         "**/*.user":true,
         "**/*.userprefs":true,
         "**/*.unityproj":true,
-        "**/*.dll":true,
+        "**/*.dll":false,
         "**/*.exe":true,
         "**/*.pdf":true,
         "**/*.mid":true,
@@ -51,5 +51,39 @@
         "ProjectSettings/":true,
         "temp/":true,
         "Temp/":true
-    }
+    },
+    "files.associations": {
+        "future": "cpp"
+    },
+    "commands.workspaceCommands": {
+        "Add Header to Source Files (Fast)": {
+            "command": "workbench.action.findInFiles",
+            "args": {
+                "filesToInclude": "./Assets/MaTech/**/*.cs",
+                "isRegex": true, 
+                "query": "^(?<!\\n)(?!// Copyright \\(c\\) \\d+.*(?:LuiCat|MaTech))",
+                "replace": "// Copyright (c) 2022, LuiCat (as MaTech)\n// \n// This Source Code Form is subject to the terms of the Mozilla Public\n// License, v. 2.0. If a copy of the MPL was not distributed with this\n// file, You can obtain one at https://mozilla.org/MPL/2.0/.\n\n",
+                "isCaseSensitive": true,
+                "preserveCase": true,
+                "useExcludeSettingsAndIgnoreFiles": false,
+                "matchWholeWord": false,
+                "triggerSearch": true
+            }
+        },
+        "Add Header to Source Files (Exclude Copyrighted)": {
+            "command": "workbench.action.findInFiles",
+            "args": {
+                "filesToInclude": "./Assets/MaTech/**/*.cs",
+                "isRegex": true, 
+                "query": "^(?<!\\n)((?:\\s|\\n|(?:/\\*(?:\\n|(?![Cc]opyright(?:\\s*\\(c\\))(?:\\s*[\\d\\s-]+))[^\\*]|\\*[^/])*\\*/)|(?://(?:(?![Cc]opyright(?:\\s*\\(c\\))(?:\\s*[\\d\\s-]+)).)*\\n))*(?=(?!//|/\\*)\\S))",
+                "replace": "// Copyright (c) 2022, LuiCat (as MaTech)\n// \n// This Source Code Form is subject to the terms of the Mozilla Public\n// License, v. 2.0. If a copy of the MPL was not distributed with this\n// file, You can obtain one at https://mozilla.org/MPL/2.0/.\n\n$1",
+                "isCaseSensitive": true,
+                "preserveCase": true,
+                "useExcludeSettingsAndIgnoreFiles": false,
+                "matchWholeWord": false,
+                "triggerSearch": true
+            }
+        }
+    },
+    "omnisharp.projectFilesExcludePattern": "**/node_modules/**,**/.git/**,**/bower_components/**,**/Malody.csproj"
 }

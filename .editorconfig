@@ -7,6 +7,8 @@ insert_final_newline = false
 indent_style = space
 indent_size = 4
 
+file_header_template = Copyright (c) $CREATED_YEAR$, LuiCat (as MaTech)\n\nThis Source Code Form is subject to the terms of the Mozilla Public\nLicense, v. 2.0. If a copy of the MPL was not distributed with this\nfile, You can obtain one at https://mozilla.org/MPL/2.0/.
+
 # Microsoft .NET properties
 csharp_indent_switch_labels = false
 csharp_new_line_before_catch = false
@@ -40,10 +42,10 @@ dotnet_naming_rule.private_static_readonly_rule.style = lower_camel_case_style
 dotnet_naming_rule.private_static_readonly_rule.symbols = private_static_readonly_symbols
 dotnet_naming_rule.public_fields_rule.import_to_resharper = as_predefined
 dotnet_naming_rule.public_fields_rule.severity = warning
-dotnet_naming_rule.public_fields_rule.style = lower_camel_case_style
+dotnet_naming_rule.public_fields_rule.style = upper_camel_case_style
 dotnet_naming_rule.public_fields_rule.symbols = public_fields_symbols
 dotnet_naming_rule.static_readonly_rule.import_to_resharper = as_predefined
-dotnet_naming_rule.static_readonly_rule.resharper_style = comparer + AaBb, aaBb
+dotnet_naming_rule.static_readonly_rule.resharper_style = Comparer + AaBb, AaBb
 dotnet_naming_rule.static_readonly_rule.severity = warning
 dotnet_naming_rule.static_readonly_rule.style = comparer_upper_camel_case_style
 dotnet_naming_rule.static_readonly_rule.symbols = static_readonly_symbols
